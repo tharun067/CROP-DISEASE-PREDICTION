@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction Result</title>
+   
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Predicted Disease:</strong> {{ prediction }}</p>
+    
+    <h2>Precautions</h2>
+    <ul>
+        {% for precaution in precautions %}
+            <li>{{ precaution }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Uploaded Image</h2>
+    <img src="{{ image_path }}" alt="Uploaded Image" style="max-width:500px;">
+    
+    <br><br>
+    <a href="/">Upload another image</a>
+</body>
+</html>
